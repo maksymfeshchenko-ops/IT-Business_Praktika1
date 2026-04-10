@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Add Student</title>
+</head>
+
+<body>
+
+<h2>Додати студента</h2>
+
+<form th:action="@{/students/add}" th:object="${student}" method="post">
+
+    Ім'я:
+    <input type="text" th:field="*{name}" />
+    <br><br>
+
+    Вік:
+    <input type="number" th:field="*{age}" />
+    <br><br>
+
+    Email:
+    <input type="email" th:field="*{email}" />
+    <br><br>
+
+    <button type="submit">Зберегти</button>
+
+</form>
+
+<br>
+
+<a href="/students">Назад</a>
+
+</body>
+</html>
